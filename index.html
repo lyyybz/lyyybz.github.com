@@ -173,7 +173,7 @@
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle">一切终将落幕,万物终将归一</p>
+  <p class="site-subtitle">一切终将落幕, 万物终将归一</p>
 </div>
 
 <div class="site-nav-toggle">
@@ -292,6 +292,154 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://lyyybz.coding.me/blog/2016/12/19/JAVA-RMI远程方法调用/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="lyyybz">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/blog/images/avatar.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="繁华落尽">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="繁华落尽" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/blog/2016/12/19/JAVA-RMI远程方法调用/" itemprop="url">
+                  JAVA RMI远程方法调用
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-19T09:26:50+08:00">
+                2016-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/JAVA/" itemprop="url" rel="index">
+                    <span itemprop="name">JAVA</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+             <span id="/blog/2016/12/19/JAVA-RMI远程方法调用/" class="leancloud_visitors" data-flag-title="JAVA RMI远程方法调用">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="RMI&#x7684;&#x6982;&#x5FF5;"><a href="#RMI&#x7684;&#x6982;&#x5FF5;" class="headerlink" title="RMI&#x7684;&#x6982;&#x5FF5;"></a>RMI&#x7684;&#x6982;&#x5FF5;</h1><p>RMI(Remote Method Invocation)&#x8FDC;&#x7A0B;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x662F;&#x4E00;&#x79CD;&#x8BA1;&#x7B97;&#x673A;&#x4E4B;&#x95F4;&#x5229;&#x7528;&#x8FDC;&#x7A0B;&#x5BF9;&#x8C61;&#x4E92;&#x76F8;&#x8C03;&#x7528;&#x5B9E;&#x73B0;&#x53CC;&#x65B9;&#x901A;&#x8BAF;&#x7684;&#x4E00;&#x79CD;&#x901A;&#x8BAF;&#x673A;&#x5236;&#x3002;&#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x673A;&#x5236;&#xFF0C;&#x67D0;&#x4E00;&#x53F0;&#x8BA1;&#x7B97;&#x673A;&#x4E0A;&#x7684;&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x8C03;&#x7528;&#x53E6;&#x5916;&#x4E00;&#x53F0;&#x8BA1;&#x7B97;&#x673A;&#x4E0A;&#x7684;&#x5BF9;&#x8C61;&#x6765;&#x83B7;&#x53D6;&#x8FDC;&#x7A0B;&#x6570;&#x636E;&#x3002;RMI&#x662F;Enterprise JavaBeans&#x7684;&#x652F;&#x67F1;&#xFF0C;&#x662F;&#x5EFA;&#x7ACB;&#x5206;&#x5E03;&#x5F0F;Java&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x65B9;&#x4FBF;&#x9014;&#x5F84;&#x3002;&#x5728;&#x8FC7;&#x53BB;&#xFF0C;TCP/IP&#x5957;&#x63A5;&#x5B57;&#x901A;&#x8BAF;&#x662F;&#x8FDC;&#x7A0B;&#x901A;&#x8BAF;&#x7684;&#x4E3B;&#x8981;&#x624B;&#x6BB5;&#xFF0C;&#x4F46;&#x6B64;&#x5F00;&#x53D1;&#x65B9;&#x5F0F;&#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;&#x5F00;&#x53D1;&#xFF0C;&#x5728;&#x5F00;&#x53D1;&#x4E00;&#x4E2A;&#x5982;&#x6B64;&#x7684;&#x901A;&#x8BAF;&#x673A;&#x5236;&#x65F6;&#x5F80;&#x5F80;&#x4EE4;&#x7A0B;&#x5E8F;&#x5458;&#x611F;&#x89C9;&#x5230;&#x4E4F;&#x5473;&#xFF0C;&#x5BF9;&#x6B64;RPC(Remote Procedure Call&#xFF09;&#x5E94;&#x8FD0;&#x800C;&#x751F;&#xFF0C;&#x5B83;&#x4F7F;&#x7A0B;&#x5E8F;&#x5458;&#x66F4;&#x5BB9;&#x6613;&#x5730;&#x8C03;&#x7528;&#x8FDC;&#x7A0B;&#x7A0B;&#x5E8F;&#xFF0C;&#x4F46;&#x5728;&#x9762;&#x5BF9;&#x590D;&#x6742;&#x7684;&#x4FE1;&#x606F;&#x4F20;&#x8BAF;&#x65F6;&#xFF0C;RPC&#x4F9D;&#x7136;&#x672A;&#x80FD;&#x5F88;&#x597D;&#x7684;&#x652F;&#x6301;&#xFF0C;&#x800C;&#x4E14;RPC&#x672A;&#x80FD;&#x505A;&#x5230;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8C03;&#x7528;&#x7684;&#x5F00;&#x53D1;&#x6A21;&#x5F0F;&#x3002;&#x9488;&#x5BF9;RPC&#x670D;&#x52A1;&#x9057;&#x7559;&#x7684;&#x95EE;&#x9898;&#xFF0C;RMI&#x51FA;&#x73B0;&#x5728;&#x4E16;&#x4EBA;&#x9762;&#x524D;&#xFF0C;&#x5B83;&#x88AB;&#x8BBE;&#x8BA1;&#x6210;&#x4E00;&#x79CD;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x901A;&#x8BAF;&#x65B9;&#x5F0F;&#xFF0C;&#x5141;&#x8BB8;&#x7A0B;&#x5E8F;&#x5458;&#x4F7F;&#x7528;&#x8FDC;&#x7A0B;&#x5BF9;&#x8C61;&#x6765;&#x5B9E;&#x73B0;&#x901A;&#x4FE1;&#xFF0C;&#x5E76;&#x4E14;&#x652F;&#x6301;&#x591A;&#x7EBF;&#x7A0B;&#x7684;&#x670D;&#x52A1;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x6B21;&#x8FDC;&#x7A0B;&#x901A;&#x8BAF;&#x7684;&#x9769;&#x547D;&#xFF0C;&#x4E3A;&#x8FDC;&#x7A0B;&#x901A;&#x4FE1;&#x5F00;&#x8F9F;&#x65B0;&#x7684;&#x91CC;&#x7A0B;&#x7891;&#x3002;<br></p>
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="/blog/2016/12/19/JAVA-RMI远程方法调用/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="https://lyyybz.coding.me/blog/2016/12/15/Hexo/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -363,13 +511,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <a href="/blog/2016/12/15/Hexo/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/15/Hexo/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -519,13 +660,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <a href="/blog/2016/12/12/金缕衣/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/12/金缕衣/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -674,13 +808,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <a href="/blog/2016/12/12/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/12/hello-world/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -789,7 +916,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/blog/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -797,7 +924,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/blog/categories">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -931,37 +1058,14 @@
 
   
 
-  
-    
-  
 
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"lyyybz"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
 
-  
-    
-      
-      <script src="/blog/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-      <script src="/blog/js/src/hook-duoshuo.js?v=5.1.0"></script>
-    
-    
-    <script src="/blog/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/blog/js/src/hook-duoshuo.js"></script>
   
 
 
 
 
+	
 
 
 
