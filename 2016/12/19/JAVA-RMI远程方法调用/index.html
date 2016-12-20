@@ -84,16 +84,16 @@
 
 
 
-<meta name="description" content="RMI&amp;#x7684;&amp;#x6982;&amp;#x5FF5;RMI(Remote Method Invocation)&amp;#x8FDC;&amp;#x7A0B;&amp;#x65B9;&amp;#x6CD5;&amp;#x8C03;&amp;#x7528;&amp;#x662F;&amp;#x4E00;&amp;#x79CD;&amp;#x8BA1;&amp;#x7B97;&amp;#x673A;&amp;#x4E4B;&amp;#x95F4;&amp;#x5229;&amp;#x7528;&amp;#x8FDC;&amp;#x7A0B;">
+<meta name="description" content="RMI(Remote Method Invocation)&amp;#x8FDC;&amp;#x7A0B;&amp;#x65B9;&amp;#x6CD5;&amp;#x8C03;&amp;#x7528;&amp;#x662F;&amp;#x4E00;&amp;#x79CD;&amp;#x8BA1;&amp;#x7B97;&amp;#x673A;&amp;#x4E4B;&amp;#x95F4;&amp;#x5229;&amp;#x7528;&amp;#x8FDC;&amp;#x7A0B;&amp;#x5BF9;&amp;#x8C61;&amp;#x4E92;&amp;#x">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JAVA RMI远程方法调用">
 <meta property="og:url" content="https://lyyybz.github.io/2016/12/19/JAVA-RMI远程方法调用/index.html">
 <meta property="og:site_name" content="繁华落尽">
-<meta property="og:description" content="RMI&amp;#x7684;&amp;#x6982;&amp;#x5FF5;RMI(Remote Method Invocation)&amp;#x8FDC;&amp;#x7A0B;&amp;#x65B9;&amp;#x6CD5;&amp;#x8C03;&amp;#x7528;&amp;#x662F;&amp;#x4E00;&amp;#x79CD;&amp;#x8BA1;&amp;#x7B97;&amp;#x673A;&amp;#x4E4B;&amp;#x95F4;&amp;#x5229;&amp;#x7528;&amp;#x8FDC;&amp;#x7A0B;">
-<meta property="og:updated_time" content="2016-12-19T02:08:27.792Z">
+<meta property="og:description" content="RMI(Remote Method Invocation)&amp;#x8FDC;&amp;#x7A0B;&amp;#x65B9;&amp;#x6CD5;&amp;#x8C03;&amp;#x7528;&amp;#x662F;&amp;#x4E00;&amp;#x79CD;&amp;#x8BA1;&amp;#x7B97;&amp;#x673A;&amp;#x4E4B;&amp;#x95F4;&amp;#x5229;&amp;#x7528;&amp;#x8FDC;&amp;#x7A0B;&amp;#x5BF9;&amp;#x8C61;&amp;#x4E92;&amp;#x">
+<meta property="og:updated_time" content="2016-12-20T07:26:47.304Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JAVA RMI远程方法调用">
-<meta name="twitter:description" content="RMI&amp;#x7684;&amp;#x6982;&amp;#x5FF5;RMI(Remote Method Invocation)&amp;#x8FDC;&amp;#x7A0B;&amp;#x65B9;&amp;#x6CD5;&amp;#x8C03;&amp;#x7528;&amp;#x662F;&amp;#x4E00;&amp;#x79CD;&amp;#x8BA1;&amp;#x7B97;&amp;#x673A;&amp;#x4E4B;&amp;#x95F4;&amp;#x5229;&amp;#x7528;&amp;#x8FDC;&amp;#x7A0B;">
+<meta name="twitter:description" content="RMI(Remote Method Invocation)&amp;#x8FDC;&amp;#x7A0B;&amp;#x65B9;&amp;#x6CD5;&amp;#x8C03;&amp;#x7528;&amp;#x662F;&amp;#x4E00;&amp;#x79CD;&amp;#x8BA1;&amp;#x7B97;&amp;#x673A;&amp;#x4E4B;&amp;#x95F4;&amp;#x5229;&amp;#x7528;&amp;#x8FDC;&amp;#x7A0B;&amp;#x5BF9;&amp;#x8C61;&amp;#x4E92;&amp;#x">
 
 
 
@@ -391,7 +391,7 @@
       
 
       
-        <h1 id="RMI&#x7684;&#x6982;&#x5FF5;"><a href="#RMI&#x7684;&#x6982;&#x5FF5;" class="headerlink" title="RMI&#x7684;&#x6982;&#x5FF5;"></a>RMI&#x7684;&#x6982;&#x5FF5;</h1><p>RMI(Remote Method Invocation)&#x8FDC;&#x7A0B;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x662F;&#x4E00;&#x79CD;&#x8BA1;&#x7B97;&#x673A;&#x4E4B;&#x95F4;&#x5229;&#x7528;&#x8FDC;&#x7A0B;&#x5BF9;&#x8C61;&#x4E92;&#x76F8;&#x8C03;&#x7528;&#x5B9E;&#x73B0;&#x53CC;&#x65B9;&#x901A;&#x8BAF;&#x7684;&#x4E00;&#x79CD;&#x901A;&#x8BAF;&#x673A;&#x5236;&#x3002;&#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x673A;&#x5236;&#xFF0C;&#x67D0;&#x4E00;&#x53F0;&#x8BA1;&#x7B97;&#x673A;&#x4E0A;&#x7684;&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x8C03;&#x7528;&#x53E6;&#x5916;&#x4E00;&#x53F0;&#x8BA1;&#x7B97;&#x673A;&#x4E0A;&#x7684;&#x5BF9;&#x8C61;&#x6765;&#x83B7;&#x53D6;&#x8FDC;&#x7A0B;&#x6570;&#x636E;&#x3002;RMI&#x662F;Enterprise JavaBeans&#x7684;&#x652F;&#x67F1;&#xFF0C;&#x662F;&#x5EFA;&#x7ACB;&#x5206;&#x5E03;&#x5F0F;Java&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x65B9;&#x4FBF;&#x9014;&#x5F84;&#x3002;&#x5728;&#x8FC7;&#x53BB;&#xFF0C;TCP/IP&#x5957;&#x63A5;&#x5B57;&#x901A;&#x8BAF;&#x662F;&#x8FDC;&#x7A0B;&#x901A;&#x8BAF;&#x7684;&#x4E3B;&#x8981;&#x624B;&#x6BB5;&#xFF0C;&#x4F46;&#x6B64;&#x5F00;&#x53D1;&#x65B9;&#x5F0F;&#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;&#x5F00;&#x53D1;&#xFF0C;&#x5728;&#x5F00;&#x53D1;&#x4E00;&#x4E2A;&#x5982;&#x6B64;&#x7684;&#x901A;&#x8BAF;&#x673A;&#x5236;&#x65F6;&#x5F80;&#x5F80;&#x4EE4;&#x7A0B;&#x5E8F;&#x5458;&#x611F;&#x89C9;&#x5230;&#x4E4F;&#x5473;&#xFF0C;&#x5BF9;&#x6B64;RPC(Remote Procedure Call&#xFF09;&#x5E94;&#x8FD0;&#x800C;&#x751F;&#xFF0C;&#x5B83;&#x4F7F;&#x7A0B;&#x5E8F;&#x5458;&#x66F4;&#x5BB9;&#x6613;&#x5730;&#x8C03;&#x7528;&#x8FDC;&#x7A0B;&#x7A0B;&#x5E8F;&#xFF0C;&#x4F46;&#x5728;&#x9762;&#x5BF9;&#x590D;&#x6742;&#x7684;&#x4FE1;&#x606F;&#x4F20;&#x8BAF;&#x65F6;&#xFF0C;RPC&#x4F9D;&#x7136;&#x672A;&#x80FD;&#x5F88;&#x597D;&#x7684;&#x652F;&#x6301;&#xFF0C;&#x800C;&#x4E14;RPC&#x672A;&#x80FD;&#x505A;&#x5230;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8C03;&#x7528;&#x7684;&#x5F00;&#x53D1;&#x6A21;&#x5F0F;&#x3002;&#x9488;&#x5BF9;RPC&#x670D;&#x52A1;&#x9057;&#x7559;&#x7684;&#x95EE;&#x9898;&#xFF0C;RMI&#x51FA;&#x73B0;&#x5728;&#x4E16;&#x4EBA;&#x9762;&#x524D;&#xFF0C;&#x5B83;&#x88AB;&#x8BBE;&#x8BA1;&#x6210;&#x4E00;&#x79CD;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x901A;&#x8BAF;&#x65B9;&#x5F0F;&#xFF0C;&#x5141;&#x8BB8;&#x7A0B;&#x5E8F;&#x5458;&#x4F7F;&#x7528;&#x8FDC;&#x7A0B;&#x5BF9;&#x8C61;&#x6765;&#x5B9E;&#x73B0;&#x901A;&#x4FE1;&#xFF0C;&#x5E76;&#x4E14;&#x652F;&#x6301;&#x591A;&#x7EBF;&#x7A0B;&#x7684;&#x670D;&#x52A1;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x6B21;&#x8FDC;&#x7A0B;&#x901A;&#x8BAF;&#x7684;&#x9769;&#x547D;&#xFF0C;&#x4E3A;&#x8FDC;&#x7A0B;&#x901A;&#x4FE1;&#x5F00;&#x8F9F;&#x65B0;&#x7684;&#x91CC;&#x7A0B;&#x7891;&#x3002;<br><a id="more"></a></p>
+        <p>RMI(Remote Method Invocation)&#x8FDC;&#x7A0B;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x662F;&#x4E00;&#x79CD;&#x8BA1;&#x7B97;&#x673A;&#x4E4B;&#x95F4;&#x5229;&#x7528;&#x8FDC;&#x7A0B;&#x5BF9;&#x8C61;&#x4E92;&#x76F8;&#x8C03;&#x7528;&#x5B9E;&#x73B0;&#x53CC;&#x65B9;&#x901A;&#x8BAF;&#x7684;&#x4E00;&#x79CD;&#x901A;&#x8BAF;&#x673A;&#x5236;&#x3002;&#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x673A;&#x5236;&#xFF0C;&#x67D0;&#x4E00;&#x53F0;&#x8BA1;&#x7B97;&#x673A;&#x4E0A;&#x7684;&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x8C03;&#x7528;&#x53E6;&#x5916;&#x4E00;&#x53F0;&#x8BA1;&#x7B97;&#x673A;&#x4E0A;&#x7684;&#x5BF9;&#x8C61;&#x6765;&#x83B7;&#x53D6;&#x8FDC;&#x7A0B;&#x6570;&#x636E;&#x3002;<br><a id="more"></a><br>RMI&#x662F;Enterprise JavaBeans&#x7684;&#x652F;&#x67F1;&#xFF0C;&#x662F;&#x5EFA;&#x7ACB;&#x5206;&#x5E03;&#x5F0F;Java&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x65B9;&#x4FBF;&#x9014;&#x5F84;&#x3002;&#x5728;&#x8FC7;&#x53BB;&#xFF0C;TCP/IP&#x5957;&#x63A5;&#x5B57;&#x901A;&#x8BAF;&#x662F;&#x8FDC;&#x7A0B;&#x901A;&#x8BAF;&#x7684;&#x4E3B;&#x8981;&#x624B;&#x6BB5;&#xFF0C;&#x4F46;&#x6B64;&#x5F00;&#x53D1;&#x65B9;&#x5F0F;&#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;&#x5F00;&#x53D1;&#xFF0C;&#x5728;&#x5F00;&#x53D1;&#x4E00;&#x4E2A;&#x5982;&#x6B64;&#x7684;&#x901A;&#x8BAF;&#x673A;&#x5236;&#x65F6;&#x5F80;&#x5F80;&#x4EE4;&#x7A0B;&#x5E8F;&#x5458;&#x611F;&#x89C9;&#x5230;&#x4E4F;&#x5473;&#xFF0C;&#x5BF9;&#x6B64;RPC(Remote Procedure Call&#xFF09;&#x5E94;&#x8FD0;&#x800C;&#x751F;&#xFF0C;&#x5B83;&#x4F7F;&#x7A0B;&#x5E8F;&#x5458;&#x66F4;&#x5BB9;&#x6613;&#x5730;&#x8C03;&#x7528;&#x8FDC;&#x7A0B;&#x7A0B;&#x5E8F;&#xFF0C;&#x4F46;&#x5728;&#x9762;&#x5BF9;&#x590D;&#x6742;&#x7684;&#x4FE1;&#x606F;&#x4F20;&#x8BAF;&#x65F6;&#xFF0C;RPC&#x4F9D;&#x7136;&#x672A;&#x80FD;&#x5F88;&#x597D;&#x7684;&#x652F;&#x6301;&#xFF0C;&#x800C;&#x4E14;RPC&#x672A;&#x80FD;&#x505A;&#x5230;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8C03;&#x7528;&#x7684;&#x5F00;&#x53D1;&#x6A21;&#x5F0F;&#x3002;&#x9488;&#x5BF9;RPC&#x670D;&#x52A1;&#x9057;&#x7559;&#x7684;&#x95EE;&#x9898;&#xFF0C;RMI&#x51FA;&#x73B0;&#x5728;&#x4E16;&#x4EBA;&#x9762;&#x524D;&#xFF0C;&#x5B83;&#x88AB;&#x8BBE;&#x8BA1;&#x6210;&#x4E00;&#x79CD;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x901A;&#x8BAF;&#x65B9;&#x5F0F;&#xFF0C;&#x5141;&#x8BB8;&#x7A0B;&#x5E8F;&#x5458;&#x4F7F;&#x7528;&#x8FDC;&#x7A0B;&#x5BF9;&#x8C61;&#x6765;&#x5B9E;&#x73B0;&#x901A;&#x4FE1;&#xFF0C;&#x5E76;&#x4E14;&#x652F;&#x6301;&#x591A;&#x7EBF;&#x7A0B;&#x7684;&#x670D;&#x52A1;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x6B21;&#x8FDC;&#x7A0B;&#x901A;&#x8BAF;&#x7684;&#x9769;&#x547D;&#xFF0C;&#x4E3A;&#x8FDC;&#x7A0B;&#x901A;&#x4FE1;&#x5F00;&#x8F9F;&#x65B0;&#x7684;&#x91CC;&#x7A0B;&#x7891;&#x3002;</p>
 <h1 id="&#x5F00;&#x53D1;&#x6B65;&#x9AA4;"><a href="#&#x5F00;&#x53D1;&#x6B65;&#x9AA4;" class="headerlink" title="&#x5F00;&#x53D1;&#x6B65;&#x9AA4;"></a>&#x5F00;&#x53D1;&#x6B65;&#x9AA4;</h1><ol>
 <li>&#x5148;&#x521B;&#x5EFA;&#x8FDC;&#x7A0B;&#x63A5;&#x53E3;&#x53CA;&#x58F0;&#x660E;&#x8FDC;&#x7A0B;&#x65B9;&#x6CD5;&#xFF0C;&#x6CE8;&#x610F;&#x8FD9;&#x662F;&#x5B9E;&#x73B0;&#x53CC;&#x65B9;&#x901A;&#x8BAF;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x9700;&#x8981;&#x7EE7;&#x627F;Remote</li>
 <li>&#x5F00;&#x53D1;&#x4E00;&#x4E2A;&#x7C7B;&#x6765;&#x5B9E;&#x73B0;&#x8FDC;&#x7A0B;&#x63A5;&#x53E3;&#x53CA;&#x8FDC;&#x7A0B;&#x65B9;&#x6CD5;&#xFF0C;&#x503C;&#x5F97;&#x6CE8;&#x610F;&#x7684;&#x662F;&#x5B9E;&#x73B0;&#x7C7B;&#x9700;&#x8981;&#x7EE7;&#x627F;UnicastRemoteObject</li>
@@ -452,6 +452,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2016/12/20/JAVA-JDK和JRE文件结构/" rel="prev" title="JDK 和 JRE 文件结构">
+                JDK 和 JRE 文件结构 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -519,7 +523,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/blog/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -536,7 +540,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/blog/tags">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -571,7 +575,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#RMI的概念"><span class="nav-number">1.</span> <span class="nav-text">RMI的概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开发步骤"><span class="nav-number">2.</span> <span class="nav-text">开发步骤</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#简单实例"><span class="nav-number">3.</span> <span class="nav-text">简单实例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常见错误"><span class="nav-number">4.</span> <span class="nav-text">常见错误</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#工程源码"><span class="nav-number">5.</span> <span class="nav-text">工程源码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#开发步骤"><span class="nav-number">1.</span> <span class="nav-text">开发步骤</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#简单实例"><span class="nav-number">2.</span> <span class="nav-text">简单实例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常见错误"><span class="nav-number">3.</span> <span class="nav-text">常见错误</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#工程源码"><span class="nav-number">4.</span> <span class="nav-text">工程源码</span></a></li></ol></div>
             
 
           </div>
