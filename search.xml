@@ -4,6 +4,30 @@
   
     
     <entry>
+      <title><![CDATA[SVN使用问题汇总]]></title>
+      <url>https://lyyybz.coding.me/blog/2016/12/22/SVN-SVN%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</url>
+      <content type="html"><![CDATA[<p>SVN&#x4F7F;&#x7528;&#x95EE;&#x9898;&#x6C47;&#x603B;<br><a id="more"></a></p>
+<h1 id="&#x65E0;&#x6CD5;&#x6DFB;&#x52A0;&#x548C;&#x63D0;&#x4EA4;&#x65B0;&#x589E;&#x6587;&#x4EF6;"><a href="#&#x65E0;&#x6CD5;&#x6DFB;&#x52A0;&#x548C;&#x63D0;&#x4EA4;&#x65B0;&#x589E;&#x6587;&#x4EF6;" class="headerlink" title="&#x65E0;&#x6CD5;&#x6DFB;&#x52A0;&#x548C;&#x63D0;&#x4EA4;&#x65B0;&#x589E;&#x6587;&#x4EF6;"></a>&#x65E0;&#x6CD5;&#x6DFB;&#x52A0;&#x548C;&#x63D0;&#x4EA4;&#x65B0;&#x589E;&#x6587;&#x4EF6;</h1><p>&#x76EE;&#x5F55;&#x4E2D;&#x65B0;&#x5EFA;&#x6587;&#x4EF6;&#x6216;&#x8005;&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x5F53;&#x4F7F;&#x7528;&#x6DFB;&#x52A0; Add &#x6216;&#x8005;&#x63D0;&#x4EA4;&#x547D;&#x4EE4; Commit &#x65F6;&#xFF0C;&#x754C;&#x9762;&#x4E0D;&#x663E;&#x793A;&#x65B0;&#x589E;&#x52A0;&#x7684;&#x6587;&#x4EF6;&#x6216;&#x8005;&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x5BFC;&#x81F4;&#x6587;&#x4EF6;&#x65E0;&#x6CD5;&#x63D0;&#x4EA4;&#x5230; SVN &#x670D;&#x52A1;&#x5668;&#x4E0A;&#xFF0C;&#x4F46;&#x662F;&#x53EF;&#x4EE5;&#x4E00;&#x4E2A;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x6DFB;&#x52A0;&#x3002;</p>
+<p>&#x539F;&#x56E0;&#x662F;&#x5F53;&#x6211;&#x4EEC;&#x540C;&#x65F6;&#x5FFD;&#x7565;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x65F6;&#xFF0C;SVN &#x5C31;&#x4F1A;&#x81EA;&#x52A8;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x7684;&#x7B56;&#x7565;&#xFF0C;&#x5FFD;&#x7565;&#x5168;&#x90E8;&#xFF08;&#x53EF;&#x80FD;&#x662F; SVN &#x7684;&#x4E00;&#x4E2A;BUG&#xFF09;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x5BFC;&#x81F4;&#x65B0;&#x6DFB;&#x52A0;&#x7684;&#x6587;&#x4EF6;&#x6216;&#x8005;&#x6587;&#x4EF6;&#x5939;&#x88AB;&#x5FFD;&#x7565;&#x4E86;&#x3002;</p>
+<p><strong>&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;</strong></p>
+<ul>
+<li>&#x5728;&#x6709;&#x95EE;&#x9898;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x4E0A;&#x53F3;&#x952E;&#x5C5E;&#x6027;&#xFF0C;&#x9009;&#x62E9; SVN &#x7684; Properties &#x5C5E;&#x6027;&#x3002;<br><img src="/blog/2016/12/22/SVN-SVN&#x4F7F;&#x7528;&#x95EE;&#x9898;&#x6C47;&#x603B;/0.jpg" alt="&quot;&quot;"></li>
+<li>Properties &#x5C5E;&#x6027;&#x754C;&#x9762;&#x56FE;&#x5982;&#x4E0B;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6709;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x5FFD;&#x7565;&#x7684;&#x503C;&#x3002;<br><img src="/blog/2016/12/22/SVN-SVN&#x4F7F;&#x7528;&#x95EE;&#x9898;&#x6C47;&#x603B;/1.jpg" alt="&quot;&quot;"></li>
+<li>&#x6253;&#x5F00;&#x5168;&#x5C40;&#x5FFD;&#x7565;&#x7B56;&#x7565;&#x7684;&#x503C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6709;&#x4E00;&#x4E2A; * &#xFF0C;&#x610F;&#x601D;&#x5C31;&#x662F;&#x5FFD;&#x7565;&#x6240;&#x6709;&#x65B0;&#x52A0;&#x7684;&#x6587;&#x4EF6;&#x548C;&#x6587;&#x4EF6;&#x5939;&#x3002;<br><img src="/blog/2016/12/22/SVN-SVN&#x4F7F;&#x7528;&#x95EE;&#x9898;&#x6C47;&#x603B;/2.jpg" alt="&quot;&quot;"></li>
+<li>&#x5220;&#x9664;&#x5168;&#x5C40;&#x5FFD;&#x7565;&#x503C;&#x4E2D;&#x7684; * &#xFF0C;&#x6587;&#x4EF6;&#x548C;&#x6587;&#x4EF6;&#x5939;&#x5C31;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x7684;&#x63D0;&#x4EA4;&#x4E86;&#x3002;<br><img src="/blog/2016/12/22/SVN-SVN&#x4F7F;&#x7528;&#x95EE;&#x9898;&#x6C47;&#x603B;/3.jpg" alt="&quot;&quot;"></li>
+</ul>
+<hr>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Html特殊字符编码大全]]></title>
+      <url>https://lyyybz.coding.me/blog/2016/12/21/Html-%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%A4%A7%E5%85%A8/</url>
+      <content type="html"><![CDATA[<p>Html&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#x7F16;&#x7801;&#x5927;&#x5168;<br><a id="more"></a><br><strong>&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#x7F16;&#x7801;&#x5927;&#x5168;</strong><br><img src="/blog/2016/12/21/Html-&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#x7F16;&#x7801;&#x5927;&#x5168;/1.jpg" alt="&quot;&quot;"><br><strong>&#x5E38;&#x7528;&#x7279;&#x6B8A;&#x5B57;&#x7B26;</strong><br><img src="/blog/2016/12/21/Html-&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#x7F16;&#x7801;&#x5927;&#x5168;/2.jpg" alt="&quot;&quot;"></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[JAVA异常汇总]]></title>
       <url>https://lyyybz.coding.me/blog/2016/12/21/JAVA-JAVA%E5%BC%82%E5%B8%B8%E6%B1%87%E6%80%BB/</url>
       <content type="html"><![CDATA[<p>&#x6C47;&#x603B;JAVA&#x4F7F;&#x7528;&#x8FC7;&#x7A0B;&#x4E2D;&#x9047;&#x5230;&#x7684;&#x4E00;&#x4E9B;&#x5F02;&#x5E38;&#x53CA;&#x5176;&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#x3002;<br><a id="more"></a></p>
@@ -83,8 +107,8 @@ applets      jfc        jpda      plugin
     </entry>
     
     <entry>
-      <title><![CDATA[RMI 远程方法调用]]></title>
-      <url>https://lyyybz.coding.me/blog/2016/12/19/JAVA-RMI%E8%BF%9C%E7%A8%8B%E6%96%B9%E6%B3%95%E8%B0%83%E7%94%A8/</url>
+      <title><![CDATA[JAVA RMI 远程方法调用]]></title>
+      <url>https://lyyybz.coding.me/blog/2016/12/19/JAVA-JAVA%20RMI%E8%BF%9C%E7%A8%8B%E6%96%B9%E6%B3%95%E8%B0%83%E7%94%A8/</url>
       <content type="html"><![CDATA[<p>RMI(Remote Method Invocation) &#x8FDC;&#x7A0B;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x662F;&#x4E00;&#x79CD;&#x8BA1;&#x7B97;&#x673A;&#x4E4B;&#x95F4;&#x5229;&#x7528;&#x8FDC;&#x7A0B;&#x5BF9;&#x8C61;&#x4E92;&#x76F8;&#x8C03;&#x7528;&#x5B9E;&#x73B0;&#x53CC;&#x65B9;&#x901A;&#x8BAF;&#x7684;&#x4E00;&#x79CD;&#x901A;&#x8BAF;&#x673A;&#x5236;&#x3002;&#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x673A;&#x5236;&#xFF0C;&#x67D0;&#x4E00;&#x53F0;&#x8BA1;&#x7B97;&#x673A;&#x4E0A;&#x7684;&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x8C03;&#x7528;&#x53E6;&#x5916;&#x4E00;&#x53F0;&#x8BA1;&#x7B97;&#x673A;&#x4E0A;&#x7684;&#x5BF9;&#x8C61;&#x6765;&#x83B7;&#x53D6;&#x8FDC;&#x7A0B;&#x6570;&#x636E;&#x3002;<br><a id="more"></a><br>RMI &#x662F; Enterprise JavaBeans &#x7684;&#x652F;&#x67F1;&#xFF0C;&#x662F;&#x5EFA;&#x7ACB;&#x5206;&#x5E03;&#x5F0F;Java&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x65B9;&#x4FBF;&#x9014;&#x5F84;&#x3002;&#x5728;&#x8FC7;&#x53BB;&#xFF0C;TCP/IP&#x5957;&#x63A5;&#x5B57;&#x901A;&#x8BAF;&#x662F;&#x8FDC;&#x7A0B;&#x901A;&#x8BAF;&#x7684;&#x4E3B;&#x8981;&#x624B;&#x6BB5;&#xFF0C;&#x4F46;&#x6B64;&#x5F00;&#x53D1;&#x65B9;&#x5F0F;&#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;&#x5F00;&#x53D1;&#xFF0C;&#x5728;&#x5F00;&#x53D1;&#x4E00;&#x4E2A;&#x5982;&#x6B64;&#x7684;&#x901A;&#x8BAF;&#x673A;&#x5236;&#x65F6;&#x5F80;&#x5F80;&#x4EE4;&#x7A0B;&#x5E8F;&#x5458;&#x611F;&#x89C9;&#x5230;&#x4E4F;&#x5473;&#xFF0C;&#x5BF9;&#x6B64; RPC(Remote Procedure Call&#xFF09; &#x5E94;&#x8FD0;&#x800C;&#x751F;&#xFF0C;&#x5B83;&#x4F7F;&#x7A0B;&#x5E8F;&#x5458;&#x66F4;&#x5BB9;&#x6613;&#x5730;&#x8C03;&#x7528;&#x8FDC;&#x7A0B;&#x7A0B;&#x5E8F;&#xFF0C;&#x4F46;&#x5728;&#x9762;&#x5BF9;&#x590D;&#x6742;&#x7684;&#x4FE1;&#x606F;&#x4F20;&#x8BAF;&#x65F6;&#xFF0C;RPC &#x4F9D;&#x7136;&#x672A;&#x80FD;&#x5F88;&#x597D;&#x7684;&#x652F;&#x6301;&#xFF0C;&#x800C;&#x4E14; RPC &#x672A;&#x80FD;&#x505A;&#x5230;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8C03;&#x7528;&#x7684;&#x5F00;&#x53D1;&#x6A21;&#x5F0F;&#x3002;&#x9488;&#x5BF9; RPC &#x670D;&#x52A1;&#x9057;&#x7559;&#x7684;&#x95EE;&#x9898;&#xFF0C;RMI &#x51FA;&#x73B0;&#x5728;&#x4E16;&#x4EBA;&#x9762;&#x524D;&#xFF0C;&#x5B83;&#x88AB;&#x8BBE;&#x8BA1;&#x6210;&#x4E00;&#x79CD;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x901A;&#x8BAF;&#x65B9;&#x5F0F;&#xFF0C;&#x5141;&#x8BB8;&#x7A0B;&#x5E8F;&#x5458;&#x4F7F;&#x7528;&#x8FDC;&#x7A0B;&#x5BF9;&#x8C61;&#x6765;&#x5B9E;&#x73B0;&#x901A;&#x4FE1;&#xFF0C;&#x5E76;&#x4E14;&#x652F;&#x6301;&#x591A;&#x7EBF;&#x7A0B;&#x7684;&#x670D;&#x52A1;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x6B21;&#x8FDC;&#x7A0B;&#x901A;&#x8BAF;&#x7684;&#x9769;&#x547D;&#xFF0C;&#x4E3A;&#x8FDC;&#x7A0B;&#x901A;&#x4FE1;&#x5F00;&#x8F9F;&#x65B0;&#x7684;&#x91CC;&#x7A0B;&#x7891;&#x3002;</p>
 <h1 id="&#x5F00;&#x53D1;&#x6B65;&#x9AA4;"><a href="#&#x5F00;&#x53D1;&#x6B65;&#x9AA4;" class="headerlink" title="&#x5F00;&#x53D1;&#x6B65;&#x9AA4;"></a>&#x5F00;&#x53D1;&#x6B65;&#x9AA4;</h1><ol>
 <li>&#x5148;&#x521B;&#x5EFA;&#x8FDC;&#x7A0B;&#x63A5;&#x53E3;&#x53CA;&#x58F0;&#x660E;&#x8FDC;&#x7A0B;&#x65B9;&#x6CD5;&#xFF0C;&#x6CE8;&#x610F;&#x8FD9;&#x662F;&#x5B9E;&#x73B0;&#x53CC;&#x65B9;&#x901A;&#x8BAF;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x9700;&#x8981;&#x7EE7;&#x627F; Remote</li>
