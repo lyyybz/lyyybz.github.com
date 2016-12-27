@@ -296,7 +296,7 @@ blockquote {
 img {
   display: block;
   margin: auto;
-  max-width: 99%;
+  max-width: 100%;
   height: auto;
 }
 hr {
@@ -1142,7 +1142,7 @@ pre .javascript .function {
   transform: rotate(30deg);
 }
 .posts-expand {
-  padding-top: 10px;
+  padding-top: 40px;
 }
 @media (max-width: 767px) {
   .posts-expand {
@@ -1323,7 +1323,7 @@ pre .javascript .function {
   display: none;
 }
 .posts-expand .post-title {
-  font-size: 22px;
+  font-size: 26px;
   text-align: center;
   word-break: break-word;
   font-weight: 400;
@@ -1371,7 +1371,7 @@ pre .javascript .function {
   font-size: 16px;
 }
 .posts-expand .post-meta {
-  margin: 10px 0 20px 0;
+  margin: 3px 0 60px 0;
   color: #999;
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 12px;
@@ -1421,7 +1421,7 @@ pre .javascript .function {
   }
 }
 .post-more-link {
-  margin-top: 10px;
+  margin-top: 50px;
 }
 .post-more-link .btn {
   color: #555;
@@ -1681,7 +1681,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #a18c13;
+  background: #5024ff;
 }
 .links-of-blogroll {
   font-size: 13px;
