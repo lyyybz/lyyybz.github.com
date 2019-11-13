@@ -5,7 +5,7 @@
     
     <entry>
       <title><![CDATA[Android Studio汇总]]></title>
-      <url>https://www.lyyybz.com/lyyybz/2016/12/28/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-Android-Android%20Studio%E6%B1%87%E6%80%BB/</url>
+      <url>https://www.lyyybz.com/lyyybz.github.io/2016/12/28/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-Android-Android%20Studio%E6%B1%87%E6%80%BB/</url>
       <content type="html"><![CDATA[<p>汇总Android Studio使用过程中遇到的一些异常及其解决办法。<br><a id="more"></a></p>
 <ul>
 <li>Error:(1, 0) Your project path contains non-ASCII characters. This will most likely cause the build to fail on Windows. Please move your project to a different directory. See <a href="http://b.android.com/95744" target="_blank" rel="external">http://b.android.com/95744</a> for details. This warning can be disabled by using the command line flag -Dcom.android.build.gradle.overridePathCheck=true, or adding the line com.android.build.gradle.overridePathCheck=true’ to gradle.properties file in the project directory.<br>大概意思是：项目路径包含非ASCII字符，这很可能会导致构建失败。。。。什么什么的。<br>废话一堆， 就是路径里不能含有中文！改成拼音或英文就行了，怕你们看不情重点，故意加大字号^__^。</li>
@@ -15,7 +15,7 @@
     
     <entry>
       <title><![CDATA[JAVA 4j家族]]></title>
-      <url>https://www.lyyybz.com/lyyybz/2016/12/22/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-JAVA-JAVA%204j%E5%AE%B6%E6%97%8F/</url>
+      <url>https://www.lyyybz.com/lyyybz.github.io/2016/12/22/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-JAVA-JAVA%204j%E5%AE%B6%E6%97%8F/</url>
       <content type="html"><![CDATA[<p><center><br>4j ↔ four java ↔ for java ↔ 为JAVA而生<br></center><br><a id="more"></a></p>
 <ul>
 <li><a href="https://github.com/teaey/apns4j" target="_blank" rel="external"><strong>apns4j</strong></a> - Apple Push Notification Service Implement with Java. </li>
@@ -79,7 +79,7 @@
     
     <entry>
       <title><![CDATA[SVN使用问题汇总]]></title>
-      <url>https://www.lyyybz.com/lyyybz/2016/12/22/%E5%8A%9E%E5%85%AC%E8%BD%AF%E4%BB%B6-SVN-SVN%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</url>
+      <url>https://www.lyyybz.com/lyyybz.github.io/2016/12/22/%E5%8A%9E%E5%85%AC%E8%BD%AF%E4%BB%B6-SVN-SVN%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</url>
       <content type="html"><![CDATA[<p>SVN使用问题汇总<br><a id="more"></a></p>
 <h1 id="无法添加和提交新增文件"><a href="#无法添加和提交新增文件" class="headerlink" title="无法添加和提交新增文件"></a>无法添加和提交新增文件</h1><p>目录中新建文件或者文件夹，当使用添加 Add 或者提交命令 Commit 时，界面不显示新增加的文件或者文件夹，导致文件无法提交到 SVN 服务器上，但是可以一个一个文件的添加。</p>
 <p>原因是当我们同时忽略两个文件夹时，SVN 就会自动添加一个全局的策略，忽略全部（可能是 SVN 的一个BUG），这样就导致新添加的文件或者文件夹被忽略了。</p>
@@ -96,14 +96,14 @@
     
     <entry>
       <title><![CDATA[Html特殊字符编码大全]]></title>
-      <url>https://www.lyyybz.com/lyyybz/2016/12/21/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-Html-%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%A4%A7%E5%85%A8/</url>
+      <url>https://www.lyyybz.com/lyyybz.github.io/2016/12/21/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-Html-%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%A4%A7%E5%85%A8/</url>
       <content type="html"><![CDATA[<p>Html特殊字符编码大全<br><a id="more"></a><br><strong>特殊字符编码大全</strong><br><img src="1.jpg" alt="&quot;&quot;"><br><strong>常用特殊字符</strong><br><img src="2.jpg" alt="&quot;&quot;"></p>
 ]]></content>
     </entry>
     
     <entry>
       <title><![CDATA[JAVA异常汇总]]></title>
-      <url>https://www.lyyybz.com/lyyybz/2016/12/21/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-JAVA-JAVA%E5%BC%82%E5%B8%B8%E6%B1%87%E6%80%BB/</url>
+      <url>https://www.lyyybz.com/lyyybz.github.io/2016/12/21/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-JAVA-JAVA%E5%BC%82%E5%B8%B8%E6%B1%87%E6%80%BB/</url>
       <content type="html"><![CDATA[<p>汇总JAVA使用过程中遇到的一些异常及其解决办法。<br><a id="more"></a></p>
 <h1 id="java-lang-InstantiationException"><a href="#java-lang-InstantiationException" class="headerlink" title="java.lang.InstantiationException"></a>java.lang.InstantiationException</h1><p>通过反射获取类的所有属性，代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div></pre></td><td class="code"><pre><div class="line">import java.lang.reflect.Field;</div><div class="line"></div><div class="line">/**</div><div class="line"> * Created by lyyybz</div><div class="line"> * Time : 2016/12/21 8:46</div><div class="line"> */</div><div class="line">public class ReflectTest</div><div class="line">&#123;</div><div class="line">    public static void main(String[] args)</div><div class="line">    &#123;</div><div class="line">        try</div><div class="line">        &#123;</div><div class="line">            fn(Assistant.class.getName());</div><div class="line">        &#125; catch (Exception e)</div><div class="line">        &#123;</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static void fn(String classname) throws Exception</div><div class="line">    &#123;</div><div class="line">        Class clazz = Class.forName(classname);</div><div class="line">        Field[] field = clazz.getDeclaredFields();</div><div class="line">        System.out.println(&quot;field size : &quot; + field.length);</div><div class="line">        for (Field fields : field)</div><div class="line">        &#123;</div><div class="line">            if (fields.getModifiers() == 2 || fields.getModifiers() == 10)</div><div class="line">            &#123;</div><div class="line">                fields.setAccessible(true);</div><div class="line">            &#125;</div><div class="line">            System.out.println(fields.getName() + &quot; --&gt; &quot; + fields.get(clazz.newInstance()));</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static class Assistant</div><div class="line">    &#123;</div><div class="line">        private String name;</div><div class="line">        private int value;</div><div class="line"></div><div class="line">        public Assistant(String name, int value)</div><div class="line">        &#123;</div><div class="line">            this.name = name;</div><div class="line">            this.value = value;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        public String getName()</div><div class="line">        &#123;</div><div class="line">            return name;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        public int getValue()</div><div class="line">        &#123;</div><div class="line">            return value;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>执行结果:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">java.lang.InstantiationException: cn.com.eastsoft.ddc.util.other.ReflectTest$Assistant</div><div class="line">	at java.lang.Class.newInstance0(Class.java:342)</div><div class="line">	at java.lang.Class.newInstance(Class.java:310)</div><div class="line">	at cn.com.eastsoft.ddc.util.other.ReflectTest.fn(ReflectTest.java:35)</div><div class="line">	at cn.com.eastsoft.ddc.util.other.ReflectTest.main(ReflectTest.java:17)</div><div class="line">	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</div><div class="line">	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)</div><div class="line">	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)</div><div class="line">	at java.lang.reflect.Method.invoke(Method.java:597)</div><div class="line">	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:147)</div></pre></td></tr></table></figure></p>
@@ -116,7 +116,7 @@
     
     <entry>
       <title><![CDATA[JDK 和 JRE 文件结构]]></title>
-      <url>https://www.lyyybz.com/lyyybz/2016/12/20/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-JAVA-JDK%E5%92%8CJRE%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/</url>
+      <url>https://www.lyyybz.com/lyyybz.github.io/2016/12/20/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-JAVA-JDK%E5%92%8CJRE%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/</url>
       <content type="html"><![CDATA[<p><strong>JDK 和 JRE 文件结构 </strong><br><a href="http://docs.oracle.com/javase/6/docs/technotes/tools/windows/jdkfiles.html#jdk1.6.0" target="_blank" rel="external">JDK and JRE File Structure</a> - 原文<br>本文简要地介绍一下 JDK 的目录和这些目录所包含的文件。需要注意的是，JRE 的文件结构与 JDK 中 jre 目录的结构是相同的。<br><a id="more"></a></p>
 <h1 id="用于开发的文件和目录"><a href="#用于开发的文件和目录" class="headerlink" title="用于开发的文件和目录"></a>用于开发的文件和目录</h1><p>Development Files and Directories</p>
 <p>这一节先来看一下在 Java 开发中最为重要的文件和必需的目录。需要注意的，诸如 demos、Java 源代码和 C 语言头文件这些目录并不是必需的。关于这些目录结构会在 其他的文件和目录 一节中描述。</p>
@@ -182,7 +182,7 @@ applets      jfc        jpda      plugin
     
     <entry>
       <title><![CDATA[JAVA RMI 远程方法调用]]></title>
-      <url>https://www.lyyybz.com/lyyybz/2016/12/19/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-JAVA-JAVA%20RMI%E8%BF%9C%E7%A8%8B%E6%96%B9%E6%B3%95%E8%B0%83%E7%94%A8/</url>
+      <url>https://www.lyyybz.com/lyyybz.github.io/2016/12/19/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-JAVA-JAVA%20RMI%E8%BF%9C%E7%A8%8B%E6%96%B9%E6%B3%95%E8%B0%83%E7%94%A8/</url>
       <content type="html"><![CDATA[<p>RMI(Remote Method Invocation) 远程方法调用是一种计算机之间利用远程对象互相调用实现双方通讯的一种通讯机制。使用这种机制，某一台计算机上的对象可以调用另外一台计算机上的对象来获取远程数据。<br><a id="more"></a><br>RMI 是 Enterprise JavaBeans 的支柱，是建立分布式Java应用程序的方便途径。在过去，TCP/IP套接字通讯是远程通讯的主要手段，但此开发方式没有使用面向对象的方式实现开发，在开发一个如此的通讯机制时往往令程序员感觉到乏味，对此 RPC(Remote Procedure Call） 应运而生，它使程序员更容易地调用远程程序，但在面对复杂的信息传讯时，RPC 依然未能很好的支持，而且 RPC 未能做到面向对象调用的开发模式。针对 RPC 服务遗留的问题，RMI 出现在世人面前，它被设计成一种面向对象的通讯方式，允许程序员使用远程对象来实现通信，并且支持多线程的服务，这是一次远程通讯的革命，为远程通信开辟新的里程碑。</p>
 <h1 id="开发步骤"><a href="#开发步骤" class="headerlink" title="开发步骤"></a>开发步骤</h1><ol>
 <li>先创建远程接口及声明远程方法，注意这是实现双方通讯的接口，需要继承 Remote</li>
@@ -206,7 +206,7 @@ applets      jfc        jpda      plugin
     
     <entry>
       <title><![CDATA[Hello World]]></title>
-      <url>https://www.lyyybz.com/lyyybz/2016/12/13/hello-Hexo/</url>
+      <url>https://www.lyyybz.com/lyyybz.github.io/2016/12/13/hello-Hexo/</url>
       <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.<br><a id="more"></a></p>
 <pre><code>               _ooOoo_    
               o8888888o   
