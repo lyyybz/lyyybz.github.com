@@ -1,0 +1,174 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js"  data-appid="100566052" data-redirecturi="http://www.lyyybz.com/jump.html" charset="utf-8"></script>
+<link href="../css/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/script.js"></script>
+
+<style type="text/css" media="screen">
+body,dt,dl{margin:0px;padding:0px;}
+#j-focusPic{width: 100%;height:430px;overflow: hidden;position: relative;margin: 0 auto;}
+.screen .movie{height: 430px;width: 100%;display:inline-block;text-align: center;position: absolute;}
+.screen .movie.on{opacity : 0;filter:alpha(opacity=0);}
+.navigation{width:100%;height:60px;margin:0 auto;padding-top:30px;overflow: hidden;}
+.navigation dt{position: relative;left: 50%;margin-left: -208px;width: 416px;height: 60px;}
+.navigation dt dl{margin-right:28px;float:left;cursor: pointer;width:60px;height:60px;text-align:center;position: relative;}
+.navigation .t1,.navigation .t2,.navigation .t3,.navigation .t4,.navigation .t5{background:#f8f8f8 url('images/tab.png') no-repeat;width:55px;height:55px;}
+.navigation .t1{background-position: -3px -1px;}
+.navigation .t2{background-position: -91px -1px;}
+.navigation .t3{background-position: -177px -1px;}
+.navigation .t4{background-position: -265px -1px;}
+.navigation .t5{background-position: -352px -1px;}
+.navigation .tm{background:url('images/tm.png') no-repeat;width:54px;height:55px;}
+.navigation .on .tm{opacity : 0;filter:alpha(opacity=0);}
+.none{display:none;}
+</style>
+
+</head>
+<body>
+
+</br></br></br></br>
+<script  type="text/javascript"> 
+$(document).ready(function(){
+	
+	$(".navbg").capacityFixed();
+	
+	$("#navul > li").not(".navhome").hover(function(){
+		$(this).addClass("navmoon");
+	},function(){
+		$(this).removeClass("navmoon");
+	});
+	
+});
+</script>
+
+
+<div id="j-focusPic">
+	<div class="screen j-slider" flag="0" style="position: absolute;width: 100%;">
+		<div class="movie"><img src="images/lead1.jpg" /></div>
+		<div class="movie on" ><img src="images/lead2.jpg" /></div>
+		<div class="movie on" index="2"><img src="images/lead3.jpg" /></div>
+		<div class="movie on" index="3"><img src="images/lead4.jpg" /></div>
+		<div class="movie on" index="4"><a class="button" href="javascript:;"></a><img src="images/lead5.jpg" /></div>
+	</div>
+</div>
+
+<div class="navigation">
+	<dt>
+		<dl class="t1" index="0"><div class="tm"></div></dl>
+		<dl class="t2" index="1"><div class="tm"></div></dl>
+		<dl class="t3" index="2"><div style="margin-left:1px;" class="tm"></div></dl>
+		<dl class="t4" index="3"><div class="tm"></div></dl>
+		<dl class="t5" index="4"><div class="tm"></div></dl>
+	</dt>
+</div>
+
+<script language="javascript" type="text/javascript" src="js/jquery.js"></script>
+<script>
+(function(){
+	var $width=$(document).width();
+    var getIndex=0;
+	var interFlag=true;
+	var movieInter=null;
+	var focuMovie=$("#j-focusPic .movie");
+	var btn=$(".navigation dt dl");
+	$(".navigation dt dl .tm").eq(0).css("opacity",0);
+	focuMovie.each(function(i){
+		if(i!==0) $(this).css("left",$width);
+	})
+	//导航滑过
+	btn.mouseover(function(){
+		if(interFlag){
+			clearInterval(movieInter);
+			clearInterval(movieTime);
+			interFlag=false;
+		}
+		
+		var j=$(this).attr("index");
+		var anim=-$width;
+		var object=$(this);
+		if(getIndex<j) anim=$width;
+		if(getIndex==j) return;
+	
+		anmtion(getIndex,j,anim,object);
+		getIndex=j;
+	})
+	var anmtion=function(i,j,anim,object){
+		btn.each(function(k){
+			var _this=$(this).find(".tm");
+			_this.animate({ opacity: 1},{queue :false}, 200 );
+		})
+		var _this_=object.find(".tm");
+		_this_.animate({ opacity: 0},{queue :false}, 200 );
+		var num=40;
+		focuMovie.eq(i).animate({
+			//left : anim,
+			opacity : "0"
+		},{	duration: 800,
+			queue :false,
+			complete: function(){
+				focuMovie.eq(i).css("left",anim);
+			}
+		});
+
+		if(anim==$width) num=-40;
+		focuMovie.eq(j).animate({
+			left : num,
+			opacity : "1"
+		},{ 
+			duration: 800,
+			queue :false,
+			complete: function(){
+					focuMovie.eq(j).animate({
+						left : 0
+					},{ queue :false,
+						complete: function(){
+							for(var t=0;t<5;t++){
+								if(t>j) focuMovie.eq(t).css("left",$width+40);
+								if(t<j) focuMovie.eq(t).css("left",-$width-40);
+							}
+						}
+					});
+			}
+		});
+	};
+	//立即进入
+	$(".button").click(function(){
+		window.location.href = "http://sc.admin5.com";
+		//setRequest();
+	})
+	//自动播放
+	var movieTime=setTimeout(function(){
+		var ii=getIndex+1;
+		var id=btn.eq(ii);
+		anmtion(getIndex,ii,$width,id);
+		getIndex=ii;
+		movieInter=setInterval(function(){
+			var jj=getIndex+1;
+			if(jj>=4) clearInterval(movieInter);
+			var object=btn.eq(jj);
+			anmtion(getIndex,jj,$width,object);
+			getIndex=jj;
+		},5000);
+	},3000);
+
+	var request=function(names){
+		if(names){
+			var URLParams = "";
+			var aParams = document.location.search.substr(1).split('&');
+			for (i=0; i < aParams.length ; i++){
+				var aParam = aParams[i].split('=');
+				if (aParam[0]==names)
+					URLParams = aParam[1];
+			}
+			return URLParams;
+		}
+	};
+
+})();
+</script>
+</body>
+</html>
